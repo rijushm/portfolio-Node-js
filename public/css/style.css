@@ -1,0 +1,571 @@
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Odibee Sans', cursive;
+}
+:root{
+    --pink: #fd79a8;
+    --orange: #e67e22;
+    --green: #00b894;
+}
+body{
+    width: 100%;
+}
+.loaderBox{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    z-index: 999999999999999999999;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    transition: 0.5s;
+}
+.loaderBox.deactive{
+    z-index: -200;
+    opacity: 0;
+}
+.loaderBox lottie-player{
+    width: 300px;
+    height: 300px;
+}
+nav{
+    display:block;
+    width:100%;
+    height: 4.5rem;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0px 50px;
+    color: #fff;
+    position: relative;
+    z-index: 100;
+}
+nav .navBar{
+    display:none;
+}
+nav .navbox{
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+nav a{
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.4rem;
+    transition: 0.3s;
+}
+nav a:hover{
+    opacity: 0.8;
+    color: #000;
+}
+nav .navbox h3{
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    transition:0.5s;
+}
+/* nav .navbox h3 span.diff{
+    color: var(--green);
+} */
+nav .navbox h3 .word .char{
+    transition: 0.5s;
+    animation: navlogoanim 10s infinite linear forwards;
+    animation-delay: calc(0s + (0.1s * var(--char-index)));
+}
+@keyframes navlogoanim{
+    0%{
+        transform:translateY(0px);
+        color: #000;
+    }
+    25%{
+        color: #fff;
+    }
+    50%{
+        color: #000;
+    }
+    100%{
+        transform:translateY(0px);
+        color: #000;
+    }
+}
+nav ul{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    list-style: none;
+    margin-right: 20px;
+}
+nav ul li {
+    margin: 0px 20px;
+    transform: translateY(6px);
+}
+
+nav ul li a.btn{
+    padding:6px 50px;
+    border-radius: 20px;
+    background-color: var(--green);
+    color: #fff;
+    transition: 0.5s;
+}
+/* ---------------- */
+p, p em{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500 !important;
+    font-size: 1rem;
+    padding-right: 90px;
+    margin-bottom: 10px;
+}
+.containerBox{
+    width: 100%;
+    height: calc(100vh - 4.5rem);
+    overflow: hidden;
+    background-color:#fff;
+    padding: 0px 100px
+}
+.containerBox.containerBox2{
+    height:100vh;
+}
+.containerBox.containerBox2 .row{
+    transition: 2s;
+}
+
+.containerBox{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+    color: #000;
+    font-weight: 600;
+    /* -webkit-text-stroke: 1px var(--pink); */
+}
+.containerBox .conBox{
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    flex-direction: column;
+    text-align: left;
+    padding: 0px 10px 0px 80px;
+    position: relative;
+    z-index: 10;
+}
+lottie-player{
+    width: calc(100vh - 4.5rem);
+    height: calc(100vh - 4.5rem);
+    position: relative;
+    margin-top: 0px;
+    transform: scale(1);
+}
+.containerBox .conBox h1{
+    text-transform: uppercase;
+    font-size: 3rem;
+    color: #000;
+    font-weight: 900;
+    padding-right: 50px;
+    letter-spacing:1px;
+}
+.containerBox .conBox h1 span{
+    color: var(--green);
+}
+.containerBox .conBox .aBox a{
+    display: inline-block;
+    padding: 10px 60px;
+    border-radius: 20px;
+    background-color: #00b894;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.5s;
+}
+.containerBox .conBox .aBox a:hover{
+    transform: scale(1.02);
+}
+.containerBox .conBox .aBox a.linkMain2{
+    background: #000;
+    margin-left: 10px;
+}
+.containerBox .listItem{
+    margin: 10px 0px;
+    position: relative;
+    left: 30%;
+    transition: 1s;
+    opacity: 0.5;
+}
+.containerBox .listItem.item1{
+    transition-delay: 0.4s;
+}
+.containerBox .listItem.item2{
+    transition-delay: 0.8s;
+}
+.containerBox .listItem.item3{
+    transition-delay: 1.2s;
+}
+.containerBox.containerBox2 .row.viewbox .listItem{
+    left: 0%;
+    opacity: 1;
+}
+.containerBox .listItem .content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row;
+}
+.containerBox .listItem .imgBox{
+    width:50px;
+    height:50px;
+    padding: 10px;
+    border-radius: 50%;
+    background: var(--green);
+    margin-right: 15px;
+}
+.containerBox .listItem .imgBox img{
+    width:100%;
+    object-fit: cover;
+}
+.containerBox .listItem .content p{
+    text-transform: uppercase;
+    font-weight: 900 !important;
+    font-size: 1.3rem;
+    letter-spacing:1px;
+    font-family: 'Odibee Sans', cursive;
+    transform: translateY(5px);
+}
+
+.containerBox3{
+    width: 100%;
+    height:100vh;
+    padding: 0px 180px;
+    background: url(../icon/wave.svg) center center no-repeat;
+    background-size: cover;
+}
+
+.containerBox3 .row{
+    width: 100%;
+}
+.containerBox3 h2{
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing:1px;
+    margin-top: -180px;
+    margin-bottom: 30px;
+}
+.containerBox3 h2 span{
+    color: var(--green);
+}
+.containerBox3 .content{
+    padding: 60px 20px 20px 20px;
+    width: 100%;
+    background-color: var(--green);
+    text-align: center;
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+}
+.containerBox3 .content img{
+    width: 100px;
+}
+.containerBox3 .content lottie-player{
+    width: 70%;
+    height: 100%;
+}
+.containerBox3 .content h4{
+    font-size: 1.5rem;
+    opacity: 0.5;
+    /* position: absolute;
+   bottom: 50px;
+   left: 50%;
+   width: 140%;*/
+   transform: translateY(30px); 
+   color: #fff;
+   letter-spacing:2px;
+   z-index: 1;
+   text-transform: uppercase;
+   font-weight: 900;
+}
+.containerBox3 .content a.btn{
+    display: block;
+    margin-top: 50px;
+    padding:6px 50px;
+    border-radius: 20px;
+    background-color: #fff;
+    text-transform: uppercase;
+    letter-spacing:1px;
+    color: var(--green);
+    position: relative;
+    z-index: 2;
+}
+
+.err404{
+    width: 100%;
+}
+.err404 .row{
+    width: 100%;
+}
+.err404 lottie-player{
+    width: 100%;
+}
+
+
+/* ----------------------------------------------------------------
+------------------------------------------------------------------------------------------------
+--------------------------------------- */
+
+@media only screen and (max-width: 600px){
+    nav{
+        display:block;
+        width:100%;
+        height: 4rem;
+        padding:0px 20px;
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        box-shadow: 1px 1px 10px rgba(0,0,0,0.1);
+        position: fixed;
+        top:0rem;
+        z-index: 70000;
+        background: #fff;
+    }
+    nav .navBar{
+        display:block;
+        width:50px;
+        height:50px;
+        background: #fff;
+        position: relative;
+    }
+    nav .navBar .barBox{
+        width:100%;
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%, -50%);
+        display:flex;
+        justify-content:center;
+        align-items: flex-end;
+        flex-direction: column;
+    }
+    nav .navBar .barBox .bar{
+        position: relative;
+        right: 0px;
+        height:4px;
+        background: #000;
+        margin-bottom: 5px;
+        z-index: 5;
+        transition: 0.5s;
+    }
+    nav .navBar .barBox .bar.one{
+        width:40px;
+    }
+    nav .navBar .barBox .bar.two{
+        width:30px;
+    }
+    nav .navBar .barBox .bar.three{
+        width:20px;
+    }
+    
+    nav .navBar.active .barBox .bar.one, nav .navBar.active .barBox .bar.two, nav .navBar.active .barBox .bar.three{
+        width: 60%;
+    }
+    nav .navBar.active .barBox .bar.one{
+        transform: translateY(9px) rotate(45deg);
+    }
+    nav .navBar.active .barBox .bar.two{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    nav .navBar.active .barBox .bar.three{
+        transform: translateY(-9px) rotate(-45deg);
+    }
+    nav .navLinks{
+        height:100%;
+        position: fixed;
+        top:4rem;
+        right: -300px;
+        width:60%;
+        display:flex;
+        justify-content:space-around;
+        align-items:center;
+        flex-direction: column;
+        z-index: 5000;
+        background: #000;
+        transition: 1s;
+    }
+    nav .navLinks.active{
+        right:0;
+    }
+    nav .navbox a h3{
+        color: #000;
+        transform: translateY(5px);
+    }
+    nav ul{
+        display:flex;
+        justify-content:space-around;
+        align-items:center;
+        flex-direction: column;
+    }
+    nav ul li {
+        margin: 20px 0px;
+        transform: translateY(0px);
+    }
+    nav .navLinks ul li a{
+        color: #fff;
+    }
+    /* ---------------- */
+
+
+    p, p em{
+        font-weight: 500 !important;
+        font-size: 0.9rem;
+        padding-right: 70px;
+    }
+    .containerBox{
+        width: 100%;
+        height: auto;
+        padding: 0px 20px;
+        margin-top:5.5rem;
+    }
+    .containerBox.containerBox2{
+        margin-top: 0px;
+        height:auto;
+    }
+    .containerBox{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        flex-direction: column;
+        color: #000;
+        font-weight: 600;
+        /* -webkit-text-stroke: 1px var(--pink); */
+    }
+    .containerBox .conBox{
+        padding: 0px 0px 0px 30px;
+        order: 2;
+    }
+    lottie-player{
+        width: 100%;
+        height: 360px;
+    }
+    .containerBox .conBox h1{
+        text-transform: uppercase;
+        font-size: 2rem;
+        color: #000;
+        font-weight: 900;
+        padding-right: 50px;
+        letter-spacing:1px;
+    }
+    .containerBox .conBox h1 span{
+        color: var(--green);
+    }
+    .containerBox .conBox .aBox a{
+        display: inline-block;
+        padding: 7px 30px;
+        border-radius: 20px;
+        background-color: #00b894;
+        text-decoration: none;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        transition: 0.5s;
+        font-size: 0.9rem;
+    }
+    .containerBox .conBox .aBox a:hover{
+        transform: scale(1.02);
+    }
+    .containerBox .conBox .aBox a.linkMain2{
+        background: #000;
+        margin-left: 10px;
+    }
+
+    .containerBox2 .conBox{
+        margin-top: -70px;
+    }
+    .containerBox .listItem{
+        margin: 10px 0px;
+    }
+    .containerBox .listItem.item1{
+        transition-delay: 1s;
+    }
+    .containerBox .listItem.item2{
+        transition-delay: 1.2s;
+    }
+    .containerBox .listItem.item3{
+        transition-delay: 1.4s;
+    }
+    .containerBox .listItem .content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: row;
+    }
+    .containerBox .listItem .imgBox{
+        width:50px;
+        height:50px;
+        padding: 10px;
+        border-radius: 50%;
+        background: var(--green);
+        margin-right: 15px;
+    }
+    .containerBox .listItem .imgBox img{
+        width:100%;
+        object-fit: cover;
+    }
+    .containerBox .listItem .content p{
+        text-transform: uppercase;
+        font-weight: 900 !important;
+        font-size: 1.3rem;
+        letter-spacing:1px;
+        font-family: 'Odibee Sans', cursive;
+        transform: translateY(5px);
+    }
+
+
+
+    .containerBox3 h2{
+        font-size: 2rem;
+        margin-top: 0px;
+        margin-bottom: 10px;
+    }
+    .containerBox3 .content{
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 390px){
+    .containerBox{
+        margin-top:3rem;
+    }
+    p, p em{
+        font-size: 0.8rem;
+        padding-right: 50px;
+    }
+    .containerBox .conBox h1{
+        font-size: 1.8rem;
+        padding-right: 0px;
+    }
+    .containerBox .conBox .aBox a{
+        display: inline-block;
+        padding: 7px 25px;
+        border-radius: 20px;
+        background-color: #00b894;
+        text-decoration: none;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        transition: 0.5s;
+        font-size: 0.7rem;
+    }
+}

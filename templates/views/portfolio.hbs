@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="stylesheet" href="css/locomotive-scroll.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
+    <title>Node Project #1</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+
+    {{>header}}
+    {{>loader}}
+
+    <div class="portfoliosection" data-scroll-section>
+            <div class="content" id="particles-js">
+
+                {{!-- view section --}}
+                <div class="viewsection">
+                    <div class="row">
+
+                        <div class="col-sm-6">
+                            <div class="conBox">
+                                <h3 class="dark mainHeader h1 active" id="" data-splitting>The <span class="diff"> Haritage </span> E-Commerce</h3>
+                                <h3 class="light mainHeader h2" id="" data-splitting>Live <span class="diff"> Weather </span> Application</h3>
+                                <h3 class="dark mainHeader h3" id="" data-splitting>The <span class="diff"> Weekend </span> Destination</h3>
+                                <h3 class="dark mainHeader h4" id="" data-splitting>Famous <span class="diff"> Tibetan </span> Restaurant </h3>
+                                <p>An online store for you to book your jewellery 
+                                    from the comfort of your home and always 
+                                    at a time that is convenient to you.</p>
+                                <a href="" class="btn"><div class="line"></div>Visit Project</a>
+
+                                <div class="indicator">
+                                    <div class="arrow arrow-left">
+                                        <i class="fas fa-arrow-left"></i>
+                                    </div>
+                                    <div class="number">
+                                        1
+                                    </div>
+                                    <div class=" arrow arrow-right">
+                                        <i class="fas fa-arrow-right"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="imgBox para-scene">
+                                <div class="mainImg" data-depth="0.2">
+                                    <img src="icon/necklace.svg" alt="" id="mainImg">
+                                </div>
+                            </div>
+                            
+                            <div class="smallImgBox">
+                             <p>Design & Development</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                {{!-- view section --}}
+
+                <div class="helperSection">
+                    <div class="box">
+                        <img src="icon/HJ1.jpg" alt="" id="helper1">
+                        <img src="icon/HJ2.jpg" alt="" id="helper2">
+                        <img src="icon/HJ3.jpg" alt="" id="helper3">
+                        <img src="icon/HJ4.jpg" alt="" id="helper4">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha512-Kef5sc7gfTacR7TZKelcrRs15ipf7+t+n7Zh6mKNJbmW+/RRdCW9nwfLn4YX0s2nO6Kv5Y2ChqgIakaC6PW09A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/locomotive-scroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/portfolio.js"></script>
+    <script>
+        var scene = document.querySelector('.para-scene');
+        var parallaxInstance = new Parallax(scene);
+    </script>
+</body>
+</html>

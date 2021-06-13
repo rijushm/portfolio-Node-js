@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/locomotive-scroll.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
+    <title>About - Node Project #1</title>
+</head>
+<body>
+
+    {{>header}}
+    {{>loader}}
+
+    <div class="homeMain" data-scroll-container>
+        <div class="containerBox" data-scroll-section>
+            <div class="row">
+                <div class="col-sm-6 conBox">
+                    <h1>Its All About <span>Me</span></h1>
+                    {{!-- <p>Also, I have used Express JS, openweather API and many... </p> --}}
+                    <p><em>The more that you read, the more things you will know. The more that you learn, the more places you’ll go.</em></p>
+
+                    <div class="aBox">
+                        <a href="/about" class="linkMain">My Portfolio</a>
+                        <a href="/contact" class="linkMain2">Download CV</a>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                    <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_qm8eqzse.json"  
+                    background="transparent"  speed="1"
+                    loop autoplay></lottie-player>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha512-Kef5sc7gfTacR7TZKelcrRs15ipf7+t+n7Zh6mKNJbmW+/RRdCW9nwfLn4YX0s2nO6Kv5Y2ChqgIakaC6PW09A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/locomotive-scroll.min.js"></script>
+    <script src="js/nav.js"></script>
+    <script>
+        const scroll = new LocomotiveScroll({
+            el: document.querySelector('.homeMain'),
+            smooth: true,
+            smartphone: {
+                smooth: true,
+            }
+        });
+
+        scroll.on('call', func => {
+            console.log('scrolled');
+        });
+
+        
+    </script>
+</body>
+</html>
